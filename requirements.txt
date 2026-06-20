@@ -1,0 +1,9 @@
+transformers
+torch
+deepface
+pandas
+numpy
+scipy
+matplotlib
+pillow
+scikit-learn
