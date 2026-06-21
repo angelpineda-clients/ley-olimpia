@@ -5,7 +5,7 @@ imagen (Hugging Face) y escribe data/preds.csv con la probabilidad de que cada
 imagen sea fake.
 
 Uso:
-    python src/run_detector.py --model prithivMLmods/Deep-Fake-Detector-Model
+    python src/run_detector.py --model dima806/deepfake_vs_real_image_detection
     python src/run_detector.py --mock   # sin descargar nada, para probar el armazon
 """
 
@@ -98,7 +98,7 @@ def run_real(rows, model_name: str, threshold: float):
 
 def main():
     parser = argparse.ArgumentParser(description="Correr detector de deepfakes -> data/preds.csv")
-    parser.add_argument("--model", default="prithivMLmods/Deep-Fake-Detector-Model",
+    parser.add_argument("--model", default="dima806/deepfake_vs_real_image_detection",
                         help="Modelo de image-classification en Hugging Face.")
     parser.add_argument("--images", default="data/images",
                         help="Carpeta con subcarpetas real/ y fake/.")

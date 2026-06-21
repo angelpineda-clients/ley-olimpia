@@ -35,9 +35,9 @@ No necesitan un dataset pre-etiquetado por demografía: etiquetan ustedes con Fa
 
 ## Modelos (verificados, se cargan con transformers)
 Detector de deepfakes (image-classification):
-- prithivMLmods/Deep-Fake-Detector-Model (ViT)
-- prithivMLmods/Deepfake-Detect-Siglip2
-- prithivMLmods/deepfake-detector-model-v1
+- dima806/deepfake_vs_real_image_detection (ViT, por defecto)
+- prithivMLmods/Deep-Fake-Detector-v2-Model (ViT)
+- prithivMLmods/deepfake-detector-model-v1 (SigLIP)
 Usen 1 para el MVP; un 2do da robustez.
 
 ## Cómputo
@@ -50,7 +50,7 @@ pip install transformers torch deepface pandas matplotlib
 
 # 1) Imágenes en data/images/real/*.jpg y data/images/fake/*.jpg
 # 2) Detector -> data/preds.csv
-python src/run_detector.py --model prithivMLmods/Deep-Fake-Detector-Model
+python src/run_detector.py --model dima806/deepfake_vs_real_image_detection
 # 3) Demografía (adultos) -> data/labels.csv
 python src/label_demographics.py --images data/images --min_age 20
 # 4) Sesgo por raza o género -> tabla, prueba, figura
